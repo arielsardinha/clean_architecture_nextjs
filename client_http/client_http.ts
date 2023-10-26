@@ -7,7 +7,7 @@ export interface ClientHttp {
 }
 
 export class ClientHttpFetch implements ClientHttp {
-  private baseUrl = "https://jsonplaceholder.typicode.com";
+  private baseUrl = "https://alunos.treinaweb.com.br/tw-todos/api/v1";
   async get<T = unknown>(endpoint: string): Promise<ResponseAdapt<T>> {
     const response = await fetch(`${this.baseUrl}${endpoint}`);
     const data = await response.json();
