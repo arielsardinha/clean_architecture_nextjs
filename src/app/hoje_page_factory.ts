@@ -8,7 +8,7 @@ export class HomeFactory {
 
   static createGetTodoListUseCase(): GetTodoListUseCase {
     if (!this.clientHttp) {
-      this.clientHttp = new ClientHttpFetch();
+      this.clientHttp = ClientHttpFetch.getInstance();
     }
 
     if (!this.repository) {

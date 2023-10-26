@@ -3,8 +3,4 @@ export class Todo {
   constructor(readonly name: string, done: boolean, readonly id: number) {
     this.done = done;
   }
-
-  toggleDone() {
-    this.done = !this.done;
-  }
 }

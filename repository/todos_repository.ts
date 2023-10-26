@@ -12,6 +12,7 @@ export interface RepositoryTodos {
 
 export class RepositoryTodosHttp implements RepositoryTodos {
   constructor(readonly clientHttp: ClientHttp) {}
+  
   async getTodos(): Promise<Todo[]> {
     const { response } = await this.clientHttp.get<Todo[]>("/todos");
     return response.data;
