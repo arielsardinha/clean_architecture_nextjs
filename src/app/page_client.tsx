@@ -1,8 +1,9 @@
 "use client";
 import React, { useState, useContext } from "react";
-import { TodoList } from "../../entities/todo_list";
+
 import { HomeContext } from "./home_provider";
-import { Todo } from "../../entities/todo";
+import { TodoList } from "@/enterprise/entities/todo_list";
+import { Todo } from "@/enterprise/entities/todo";
 
 interface HomePageComponentProps {
   todoListProps: TodoList;

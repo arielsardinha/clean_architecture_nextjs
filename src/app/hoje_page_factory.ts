@@ -1,6 +1,6 @@
-import { ClientHttpFetch } from "../../client_http/client_http";
-import { RepositoryTodosHttp } from "../../repository/todos_repository";
-import { GetTodoListUseCase } from "../../usecases/get_todolist_usecase";
+import { GetTodoListUseCase } from "@/application/usecases/get_todolist_usecase";
+import { ClientHttpFetch } from "@/infra/client_http/client_http_fetch";
+import { RepositoryTodosHttp } from "@/infra/repositories/repository_todos/repository_todos_impl";
 
 export class HomeFactory {
   private static clientHttp: ClientHttpFetch;

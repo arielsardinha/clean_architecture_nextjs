@@ -1,4 +1,4 @@
-import { TodoList } from "../entities/todo_list";
+import { TodoList } from "../../enterprise/entities/todo_list";
 
 export class ToggleTodoStatusUseCase {
 

@@ -1,10 +1,10 @@
-import { Todo } from "../entities/todo";
-import { TodoList } from "../entities/todo_list";
-import { RepositoryTodos } from "../repository/todos_repository";
+import { RepositoryTodos } from "@/infra/repositories/repository_todos/repository_todos";
+import { Todo } from "../../enterprise/entities/todo";
+import { TodoList } from "../../enterprise/entities/todo_list";
 
 export class GetTodoListUseCase {
   constructor(readonly repositoryTodos: RepositoryTodos) {}
-  
+
   async exec(): Promise<TodoList> {
     const todos = await this.repositoryTodos.getTodos();
     const _todos = todos.map(

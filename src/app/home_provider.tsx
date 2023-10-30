@@ -1,6 +1,6 @@
 "use client";
+import { ToggleTodoStatusUseCase } from "@/application/usecases/toogle_todo_status_usecase";
 import React, { ReactNode } from "react";
-import { ToggleTodoStatusUseCase } from "../../usecases/toogle_todo_status_usecase";
 
 interface HomeContextType {
   toggleTodoStatusUseCase: ToggleTodoStatusUseCase;
