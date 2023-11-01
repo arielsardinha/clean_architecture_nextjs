@@ -17,7 +17,9 @@ export class ClientHttpFetch implements ClientHttp {
   async get<T = unknown>(endpoint: string): Promise<ResponseAdapt<T>> {
     const response = await fetch(`${this.baseUrl}${endpoint}`);
     const data = await response.json();
-
-    return new ResponseAdapt({ data, statusCode: response.status });
+    return {
+      data,
+      statusCode: response.status,
+    };
   }
 }

@@ -1,3 +1,4 @@
-export class ResponseAdapt<T = unknown> {
-  constructor(readonly response: { data: T; statusCode: number }) {}
+export interface ResponseAdapt<T = unknown> {
+  data: T;
+  statusCode: number;
 }

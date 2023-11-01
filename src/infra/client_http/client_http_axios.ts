@@ -10,10 +10,9 @@ export class ClientHttpAxios implements ClientHttp {
 
   async get<T = unknown>(endpoint: string): Promise<ResponseAdapt<T>> {
     const response = await this.axiosInstance.get<T>(endpoint);
-
-    return new ResponseAdapt({
+    return {
       data: response.data,
       statusCode: response.status,
-    });
+    };
   }
 }

@@ -1,6 +1,5 @@
-export class Todo {
+export interface Todo {
   done: boolean;
-  constructor(readonly name: string, done: boolean, readonly id: number) {
-    this.done = done;
-  }
+  name: string;
+  id: number;
 }

@@ -8,8 +8,11 @@ export class GetTodoListUseCase {
   async exec(): Promise<TodoList> {
     const todos = await this.repositoryTodos.getTodos();
     const _todos = todos.map(
-      (todo) => new Todo(todo.title, todo.completed, todo.id)
+      (todo) =>
+        ({ done: todo.completed, name: todo.title, id: todo.id } as Todo)
     );
-    return new TodoList(_todos);
+    return {
+      todos: _todos,
+    };
   }
 }
