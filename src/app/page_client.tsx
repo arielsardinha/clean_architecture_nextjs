@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 import { HomeContext } from "./home_provider";
 import { TodoList } from "@/enterprise/entities/todo_list";

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { HomeProvider } from "./home_provider";
-
-
+import { CrashPage } from "./crash";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <CrashPage />
         <HomeProvider>{children}</HomeProvider>
       </body>
     </html>
