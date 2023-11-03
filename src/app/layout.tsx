@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { HomeProvider } from "./home_provider";
 import { CrashPage } from "./crash";
 import { cookies } from 'next/headers'
+import styles from './global.module.scss';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   const cookieStore = cookies()
   const theme = cookieStore.get('theme')
 
@@ -23,6 +25,9 @@ export default function RootLayout({
     <html lang="en" data-theme={theme?.value}>
       <body className={inter.className}>
         <CrashPage />
+        <button className={styles.button}>
+          Clique em mim
+        </button>
         <HomeProvider>{children}</HomeProvider>
       </body>
     </html>

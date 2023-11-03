@@ -1,6 +1,6 @@
 "use client";
+
 import React, { useState, useContext, useEffect } from "react";
-import { cookies } from 'next/headers'
 import { HomeContext } from "./home_provider";
 import { TodoList } from "@/enterprise/entities/todo_list";
 import { Todo } from "@/enterprise/entities/todo";
@@ -43,6 +43,7 @@ export function HomePageComponent({ todoListProps }: HomePageComponentProps) {
         </button>
         {/* Restante do app */}
       </div>
+
       <i className="icon-home" />
       <br />
       <span>Todo</span>
