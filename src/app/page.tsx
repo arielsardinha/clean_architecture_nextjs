@@ -6,5 +6,6 @@ export default async function Home() {
   const getTodoListUseCase = HomeFactory.createGetTodoListUseCase();
   const todoList = await getTodoListUseCase.exec();
 
+
   return <HomePageComponent todoListProps={todoList}></HomePageComponent>;
 }

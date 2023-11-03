@@ -1,0 +1,17 @@
+@import '../../public/fonts/my-icons/css/fontello.css';
+
+/* styles.css */
+:root {
+    --primary-bg: #ffffff;  /* Claro */
+    --primary-text: #000000;  /* Claro */
+}
+
+[data-theme='dark'] {
+    --primary-bg: #000000;  /* Escuro */
+    --primary-text: #ffffff;  /* Escuro */
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+}
